@@ -1,0 +1,23 @@
+{
+    "_comment": "Equation de la chaleur dans cylindre de dioxyde d'uranium",
+    "Paramètres physiques": {
+        "Densité de puissance (W/m^3)": 300e6,
+        "Température de surface (°C)": 800,
+        "Capacité calorifique (J/kgK)": 235e3,
+        "Densité (kg/m^3)": 10970,
+        "Formule pour la conductivité thermique (W/mK)": "(100/(7.5408+17.692*(T/1000)+3.6142*(T/1000)**2))+(6400/((T/1000)**(5/2))) * np.exp(-16.35/(T/1000))",
+        "Température de fusion (K)" : 3138
+    },
+    "Paramètres de simulation": {
+        "Rayon (m)": 0.01,
+        "Pas de temps (s)": 10,
+        "Pas de rayon (m)": 0.001,
+        "Temps final (s)": 70000
+    },
+    "Paramètres de sortie": {
+        "Intervalle de temps pour l'affichage dans le tableau (s)": 10
+    }
+}
+
+
+
