@@ -8,7 +8,6 @@ def setup_venv(REQUIRED_PACKAGES):
         subprocess.call([sys.executable, '-m', 'venv', 'ressources/custom_venv'])
 
     pip_path = 'ressources/custom_venv\\Scripts\\pip' if os.name == 'nt' else 'ressources/custom_venv/bin/pip'
-    python_path = 'ressources/custom_venv\\Scripts\\python' if os.name == 'nt' else 'ressources/custom_venv/bin/python'
 
     # Obtenir la liste des packages installés
     installed_packages = str(subprocess.check_output([pip_path, 'list']))
@@ -21,4 +20,14 @@ def setup_venv(REQUIRED_PACKAGES):
         else:
             print(f"Le package {package} est déjà installé.")
 
-    return python_path
+
+if __name__ == "__main__":
+    REQUIRED_PACKAGES = [
+    'numpy',
+    'matplotlib',
+    'tabulate',
+    'pytest',
+    'pylint',
+    'scipy']
+    
+    setup_venv(REQUIRED_PACKAGES)
