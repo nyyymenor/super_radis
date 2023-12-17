@@ -28,7 +28,7 @@ def test_bordure_temperature():
     T, r, t, T_fusion_C, data = resoudre_equation(params)
 
     # Vérifiez que la température en bordure est égale à Tsurface
-    Tsurface_K = params['Paramètres physiques']['Température de surface (°C)']
+    Tsurface_K = params['Paramètres physiques']['Température de surface (°C)'] + 273.15
     assert np.allclose(T[-1, :], Tsurface_K), "La température en bordure ne reste pas à Tsurface"
     
 def test_no_empty_variable():
